@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 **/*.pyc
 
+
 # C extensions
 *.so
 
@@ -64,8 +65,17 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
+# Auto generate documentation
+docs/en/_build/
+docs/en/_model_zoo.rst
+docs/en/modelzoo_statistics.md
+docs/en/papers/
+docs/en/api/generated/
+docs/zh_CN/_build/
+docs/zh_CN/_model_zoo.rst
+docs/zh_CN/modelzoo_statistics.md
+docs/zh_CN/papers/
+docs/zh_CN/api/generated/
 
 # PyBuilder
 target/
@@ -111,30 +121,19 @@ venv.bak/
 *.pkl
 *.pkl.json
 *.log.json
-benchlist.txt
-work_dirs/
+/work_dirs
+/mmcls/.mim
+.DS_Store
 
 # Pytorch
 *.pth
 
-# Profile
-*.prof
+# IPU
+*.pvti
+*.pvti-journal
+/cache_engine
+/report
 
-# lmdb
-*.mdb
-
-# unignore some data file in tests/data
-!tests/data/**/*.pkl
-!tests/data/**/*.pkl.json
-!tests/data/**/*.log.json
-!tests/data/**/*.pth
-
-# avoid soft links created by MIM
-mmaction/configs/*
-mmaction/tools/*
-
-*.ipynb
-
-# unignore ipython notebook files in demo
-!demo/*.ipynb
-mmaction/.mim
+# W&B
+/wandb
+/artifacts
